@@ -1,0 +1,9 @@
+# EU AI Act Compliance Tool
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location (if needed)
+# Sitemap: https://yourdomain.com/sitemap.xml
