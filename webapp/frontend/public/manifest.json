@@ -1,0 +1,16 @@
+{
+  "name": "EU AI Act Compliance Tool",
+  "short_name": "AI Compliance",
+  "description": "Comprehensive web application for managing EU AI Act compliance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
