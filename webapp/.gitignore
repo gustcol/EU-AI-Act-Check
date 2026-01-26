@@ -48,6 +48,10 @@ tmp/
 temp/
 *.tmp
 
+# Intlayer generated files
+.intlayer/
+**/locales/.intlayer/
+
 # Docker
 docker-compose.override.yml
 

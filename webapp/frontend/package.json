@@ -5,9 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run translate && tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "intlayer:build": "intlayer build",
+    "intlayer:fill": "intlayer fill",
+    "locales:merge": "npx tsx scripts/merge-locales.ts",
+    "translate": "npm run intlayer:build && npm run locales:merge",
+    "translate:fill": "npm run intlayer:fill && npm run translate"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
@@ -26,6 +31,8 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
+    "intlayer": "^7.5.0",
+    "tsx": "^4.7.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",

@@ -225,6 +225,44 @@ flowchart LR
 - **Audit Logging**: Complete trail of all user actions for compliance
 - **API Documentation**: Full Swagger/OpenAPI documentation for integrations
 
+#### Internationalization (i18n)
+
+The platform uses **i18next** with **Intlayer** for translation management:
+
+| Feature | Description |
+|---------|-------------|
+| **6 Languages** | English, Portuguese, Spanish, German, French, Italian |
+| **Type-Safe** | Content declarations in TypeScript with full autocomplete |
+| **AI Translation** | Optional AI-powered automatic translation filling |
+| **i18next Compatible** | Seamless integration with existing i18next setup |
+
+**Translation Workflow:**
+
+```bash
+# Build translations from content declarations
+npm run translate
+
+# Fill missing translations using AI (requires API key)
+npm run translate:fill
+```
+
+**Content Structure:**
+```
+webapp/frontend/src/
+├── content/           # Intlayer content declarations
+│   ├── common.content.ts
+│   ├── auth.content.ts
+│   ├── dashboard.content.ts
+│   └── ...
+├── locales/           # Generated i18next JSON files
+│   ├── en.json
+│   ├── pt.json
+│   └── ...
+└── i18n.ts            # i18next configuration
+```
+
+> **Note**: Intlayer is licensed under Apache 2.0, compatible with this project's MIT license.
+
 ### 7.6 Quick Start
 
 #### Prerequisites
@@ -622,6 +660,7 @@ Contributions to improve this framework are welcome. Please consider:
 | 1.0.0 | 2024 | Initial framework release |
 | 1.1.0 | 2025-01 | Added technology guidelines, improved documentation structure |
 | 2.0.0 | 2025-01 | Added comprehensive web application for compliance management |
+| 2.1.0 | 2025-01 | Added Intlayer integration for improved translation management |
 
 ---
 
